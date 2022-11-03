@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>书城注册页面</title>
+    <script src="../static/js/login.js"></script>
+    <div th:replace="copy :: css "></div>
+    <div th:replace="copy :: js "></div>
+        <link rel="stylesheet" th:href="@{/css/login.css}">
+    <script th:src="@{/jquery/jquery-1.7.2/jquery.js}"></script>
+</head>
+<body>
+<div class="dowebok" id="dowebok">
+    <div class="form-container sign-in-container">
+            <form action="userServlet" method="post">
+                <input type="hidden" name="action" value="register">
+                <h1>注册</h1>
+                <span>
+                </span>
+                <input type="text" id="Userusername" name="registerusername" placeholder="姓名" value="">
+                <input type="password" id="zucePassword" name="registerPassword" placeholder="以字母开头只能包含字母、数字和下划线">
+                <input type="password" id="zucePassword2" name="registerPassword01" placeholder="确认密码">
+                <input type="text" id="idcard" name="registerEmail" placeholder="邮箱">
+                <input type="submit" value="注册">
+            </form>
+    </div>
+    <script th:src="@{/js/login.js}"></script>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>已有帐号？</h1>
+                <p>请使用您的帐号进行登录</p>
+                <button class="ghost" id="signIn"><a href="">登录</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>>

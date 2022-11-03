@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ch.mapper.TypesMapper">
+
+    <select id="findByType" resultType="Types">
+        select *
+        from types
+    </select>
+    <insert id="insertType">
+        insert into types (types) value (#{types})
+    </insert>
+
+    <select id="isExist" resultType="Types">
+        select types
+        from types
+        where types = #{type}
+    </select>
+
+
+    <update id="uptateType">
+        update types
+        set types = #{type}
+        where types = #{typebefore}
+    </update>
+
+
+    <delete id="delType">
+        delete
+        from types
+        where types = #{type}
+    </delete>
+</mapper>

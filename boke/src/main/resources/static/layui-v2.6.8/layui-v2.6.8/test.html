@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>测试 - layui</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+
+<div class="layui-container">
+  <div class="layui-progress" style="margin: 15px 0 30px;">
+    <div class="layui-progress-bar" lay-percent="100%"></div>
+  </div>
+  
+  
+  <div class="layui-btn-container">
+    <button class="layui-btn" test-active="test-form">一个按钮</button>
+    <button class="layui-btn layui-btn-normal" id="test2">当前日期</button>
+  </div>
+  
+  <blockquote class="layui-elem-quote" style="margin-top: 30px;">
+    <div class="layui-text">
+      <ul>
+        <li>你当前预览的是：<span>layui-v<span id="version"></span></span></li>
+        <li>layui 是一套开源的 Web UI（界面）组件库。这是一个极其简洁的演示页面</li>
+      </ul>
+    </div>
+  </blockquote>
+</div>
+
+
+
+<!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+<script src="layui/layui.js"></script>
+
+</body>
+</html>

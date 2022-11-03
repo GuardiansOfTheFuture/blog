@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div th:fragment="css">
+
+
+    <link rel="stylesheet" th:href="@{/lib/editormd/css/editormd.css}"/>
+
+    <link rel="stylesheet" th:href="@{/css/my.css}">
+
+    <link rel="stylesheet" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" th:href="@{/layui-v2.6.8/layui-v2.6.8/layui/css/layui.css}">
+
+</div>
+
+
+
+<div th:fragment="js">
+
+    <script th:src="@{/lib/editormd/js/jquery.min.js}"></script>
+    <script th:src="@{/lib/editormd/editormd.min.js}"></script>
+    <script th:src="@{/js/login.js}"></script>
+    <script th:src="@{/jquery/jquery-1.7.2/jquery.js}"></script>
+    <script th:src="@{/layui-v2.6.8/layui-v2.6.8/layui/layui.js}"></script>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
