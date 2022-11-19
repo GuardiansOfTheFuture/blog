@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ch.mapper.BlogMapper">
+
+<insert id="saveBlog" parameterType="Blog">
+    insert into
+        blog (author,status,blogTypes,viewCount,
+              updateTime,createTime,blogContext)
+    value (#{author},#{status},#{blogTypes},#{viewCount},
+        #{updateTime},#{createTime},#{blogContext})
+</insert>
+
+
+    <select id="getBlogById" resultType="Blog">
+        select * from blog where id = #{id}
+    </select>
+
+
+    <select id="getBlogByIdShowHTML" resultType="Blog">
+        select * from blog where id = #{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>书城登录页面</title>
+    <div th:replace="copy :: css "></div>
+    <div th:replace="copy :: js "></div>
+    <script th:src="@{/js/login.js}"></script>
+        <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="dowebok" id="dowebok">
+
+    <div class="form-container sign-in-container">
+        <form method="post" th:action="@{/loginaction}">
+            <h1>登录</h1>
+            <!--@thymesVar id="msg" type="String"-->
+            <input type="text" placeholder="姓名" id="username" name="username" value="">
+            <input type="password" placeholder="密码" id="password" name="password">
+            <input type="text" placeholder="邮箱" id="email" name="email">
+<!--            <input type="text" placeholder="验证码" name="code">-->
+            <div class="code">
+<!--                <img style="height:40px;" id="codeImg1" alt="点击更换" title="点击更换" src="captcha/captchaImage?type=char" />-->
+                <a href="###" class="forget">忘记密码？</a>
+            </div>
+            <input type="submit" value="登录" style="cursor: pointer" class="dl">
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>没有帐号？</h1>
+                <p>立即注册加入我们，和我们一起开始旅程吧</p>
+                <button class="ghost" id="signUp"><a href="">注册</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

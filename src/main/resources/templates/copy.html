@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div th:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/my.css}">
+
+    <link rel="stylesheet" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" th:href="@{/layui-v2.6.8/layui-v2.6.8/layui/css/layui.css}">
+
+</div>
+
+<div th:fragment="js">
+
+    <script th:src="@{/lib/prism/prism.js}"></script>
+    <script th:src="@{/layui-v2.6.8/layui-v2.6.8/layui/layui.js}"></script>
+
+</div>
+
+<div th:fragment="nav">
+    <ul class="layui-nav" lay-filter="" style="">
+        <div class="layui-row">
+            <div class="layui-col-sm4">
+                <li class="layui-nav-item"><a th:href="@{/}">首页</a></li>
+                <li class="layui-nav-item">
+                    <a th:href="@{/bloglist}">学习</a>
+                    <dl class="layui-nav-child">
+                        <!-- 二级菜单 -->
+                        <dd><a href="">spring</a></dd>
+                        <dd><a href="">spring boot</a></dd>
+                        <dd><a href="">spring cloud</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">社区</a></li>
+            </div>
+            <div class="layui-col-md4" style="position: absolute;left: 500px;top: 10px">
+                <div class="layui-col-md9">
+
+                    <input class="layui-input" type="text" placeholder="说一说 HashMap 的底层原理...">
+                </div>
+                <div class="layui-col-md3">
+                    <button class="layui-btn layui-btn-warm"><i class="layui-icon">&#xe68f;</i> <span>搜索</span></button>
+                </div>
+            </div>
+            <div class="layui-col-md3 layui-col-sm-offset5" th:if="${not #strings.isEmpty(session.author.username)}">
+                <li class="layui-nav-item">
+                    <a href="">消息<span class="layui-badge">9</span></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a th:href="@{/about}">个人中心<span class="layui-badge-dot"></span></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a th:href="@{/about}"><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">修改信息</a></dd>
+                        <dd><a href="javascript:;">退出登录</a></dd>
+                    </dl>
+                </li>
+            </div>
+            <div class="layui-col-md3 layui-col-sm-offset5" th:if="${!not #strings.isEmpty(session.author.username)}">
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <li class="layui-nav-item">
+                    <a th:href="@{/login}">登录</a>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a th:href="@{/register}">注册</a>
+                </li>
+            </div>
+
+        </div>
+    </ul>
+</div>
+
+
+<div th:fragment="type">
+    <li class="layui-this">网站设置</li>
+    <li>用户管理</li>
+    <li>权限分配</li>
+    <li>商品管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+    <li>订单管理</li>
+</div>
+
+<div th:fragment="tag">
+    <div class="layui-btn-container" style="margin-left: 72px">
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+        <button type="button" class="layui-btn layui-btn-radius">按钮一</button>
+    </div>
+</div>
+
+
+</body>
+</html>
